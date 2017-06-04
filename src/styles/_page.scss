@@ -1,0 +1,26 @@
+@import 'styles/_breakpoints';
+@import 'headings';
+
+@mixin container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.page-wrap {
+  @include breakpoint(medium) {
+    padding-top: 0;
+  }
+  @include breakpoint(large) {
+    padding-top: 90px;
+  }
+
+  background-color: $royal;  
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  @include container;
+}
