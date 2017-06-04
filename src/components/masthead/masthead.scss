@@ -1,0 +1,121 @@
+@import 'styles/_colours.scss';
+@import 'styles/_type.scss';
+@import 'styles/_box-model.scss';
+@import 'styles/_breakpoints.scss';
+
+
+.navigation {
+  @include clearfix;
+  list-style: none;
+  padding-left: 0;
+
+  & > li {
+    list-style: none;
+    float: left;
+    a {
+      cursor: pointer;
+    }
+  }
+}
+
+.navbar {
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  margin-bottom: 0;
+  background-color: $white;
+
+  .container {
+    height: 90px; // Hack for sub-pages
+  }
+
+  .navigation {
+    margin: 0 0 0 10%;
+    width: 80%;
+  }
+
+  .navigation > li {
+    float: left;
+    width: 25%;
+
+    & > a {
+      display: block;
+      font-family: $bodycopy;
+      font-weight: 700;
+      text-align: center;      
+      margin: 0;
+      padding: 10px 0;
+      color: $royal;
+      text-align: center;
+      line-height: 70px;
+      @include pix18;
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+      }
+    }
+  }
+
+  .btn-navbar {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    line-height: 25px;
+    font-family: $headline;
+    @include pix40;
+    text-transform: uppercase;
+    background: $orange;
+    color: $white;
+    &.collapsed {
+      &:active,
+      &:focus {
+
+      }
+    }     
+    transition: all 0.1s ease-in-out;
+  }
+
+  &.scrolled {
+    box-shadow: 0 0 20px 2px transparentize($royal, 0.3);
+  }
+}
+
+.navbar li a {
+  &:before,
+  &:after {
+    // not sure if bourbon supports
+    // multiple transitions hence the fallback to longhand declarations
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    bottom: 1px;
+    transition: transform 0.3s, opacity 0.2s;
+  }
+  &:before {
+    content: '{';
+    margin-right: 10px;
+    transform: translateX(20px); 
+  }
+  &:after {
+    content: '}';
+    margin-left: 10px;
+    transform: translateX(-20px);
+  }    
+  &:hover,
+  &:focus {
+    &:before,
+    &:after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }    
+}
