@@ -1,6 +1,7 @@
 @import 'styles/_colours.scss';
 @import 'styles/_type.scss';
 @import 'styles/_box-model.scss';
+@import 'styles/_breakpoints.scss';
 
 
 .navigation {
@@ -18,6 +19,10 @@
 }
 
 .navbar {
+
+  @include breakpoint(medium) {
+    display: none;
+  }
 
   position: fixed;
   top: 0;
