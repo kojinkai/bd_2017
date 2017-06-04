@@ -2,9 +2,8 @@
 @import 'styles/_type';
 
 .intro {
+
   background-color: $royal;
-  font-family: $bodycopy;
-  font-weight: 700;  
   padding: 80px 20px;
   position: relative;
   text-align: center;
@@ -17,18 +16,24 @@
     width: 360px;    
   }
 
-  &__text {
-    max-width: 30em;
+  &__messaging {
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
+    max-width: 48rem;
+  }
+
+  &__text {
+    font-family: $bodycopy;
+    font-size: 1.5625rem;  
+    font-weight: 700;
   }
 
   &__icon {
-    padding: 0 15px;
-    font-size: 28px;
-    position: relative;
-    bottom: 14px;
     background-color: $royal;
+    bottom: 18px;    
+    padding: 0 15px;
+    position: relative;    
+    font-size: 34px;
   }
 
   &__more-link {
@@ -37,9 +42,9 @@
     border: 2px solid darken($royal, 5);
     color: $white;
     margin-bottom: 2em;
-      &:visited {
-        color: $white;
-      }    
+    &:visited {
+      color: $white;
+    }
     &:hover,
     &:focus {
       text-decoration: none;
