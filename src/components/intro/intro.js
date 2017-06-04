@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '../page-link/page-link';
 import logo from './boxdeluxe_logo.svg';
 import './intro.css';
 
@@ -21,8 +22,8 @@ class Intro extends Component {
                   I believe that coding is a craft and true practitioners place a high premium on creating performant, scalable, standards-based code and snappy, intuitive interfaces.
               </p>
             </div>
+            <Button text="Read more of my profile" />
 
-            <a className="intro__more-link" href="/about" title="learn more about Lewis Nixon">Read More</a>
         </div>
         <a className="icon-down_arrow" href="#development" data-scroll-target="#development">Scroll Down</a>
     </section>

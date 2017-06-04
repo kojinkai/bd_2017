@@ -1,0 +1,25 @@
+@import 'styles/_colours';
+@import 'styles/_type';
+
+.page-link {
+
+  background: darken($royal, 5);
+  border: 2px solid darken($royal, 5);
+  border-radius: 12px;  
+  color: $white;
+  font-family: $bodycopy;
+  font-size: .75rem;    
+  font-weight: 700;  
+  margin-bottom: 2rem;
+  padding: 0.5em 1em;  
+  text-decoration: none;  
+  transition: all .2s ease;
+
+  &:hover,
+  &:focus {
+    background: $royal; 
+    border: 2px solid $white;
+    outline: 0;
+    text-decoration: none;    
+  }
+}

@@ -35,21 +35,4 @@
     position: relative;    
     font-size: 34px;
   }
-
-  &__more-link {
-    text-decoration: none;
-    background: darken($royal, 5);
-    border: 2px solid darken($royal, 5);
-    color: $white;
-    margin-bottom: 2em;
-    &:visited {
-      color: $white;
-    }
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      border: 2px solid $white;
-      background: $royal;
-    }
-  }
 }
