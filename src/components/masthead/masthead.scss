@@ -42,6 +42,9 @@
 
     & > a {
       display: block;
+      font-family: $bodycopy;
+      font-weight: 700;
+      text-align: center;      
       margin: 0;
       padding: 10px 0;
       color: $royal;
@@ -79,4 +82,35 @@
   &.scrolled {
     box-shadow: 0 0 20px 2px transparentize($royal, 0.3);
   }
+}
+
+.navbar li a {
+  &:before,
+  &:after {
+    // not sure if bourbon supports
+    // multiple transitions hence the fallback to longhand declarations
+    display: inline-block;
+    opacity: 0;
+    position: relative;
+    bottom: 1px;
+    transition: transform 0.3s, opacity 0.2s;
+  }
+  &:before {
+    content: '{';
+    margin-right: 10px;
+    transform: translateX(20px); 
+  }
+  &:after {
+    content: '}';
+    margin-left: 10px;
+    transform: translateX(-20px);
+  }    
+  &:hover,
+  &:focus {
+    &:before,
+    &:after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }    
 }
