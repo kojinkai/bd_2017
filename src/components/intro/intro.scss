@@ -1,0 +1,50 @@
+@import 'styles/_colours';
+@import 'styles/_type';
+
+.intro {
+  background-color: $royal;
+  font-family: $bodycopy;
+  font-weight: 700;  
+  padding: 80px 20px;
+  position: relative;
+  text-align: center;
+
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    padding: 0 15px 50px;
+    border-bottom: 1px solid $white;
+    width: 360px;    
+  }
+
+  &__text {
+    max-width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__icon {
+    padding: 0 15px;
+    font-size: 28px;
+    position: relative;
+    bottom: 14px;
+    background-color: $royal;
+  }
+
+  &__more-link {
+    text-decoration: none;
+    background: darken($royal, 5);
+    border: 2px solid darken($royal, 5);
+    color: $white;
+    margin-bottom: 2em;
+      &:visited {
+        color: $white;
+      }    
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      border: 2px solid $white;
+      background: $royal;
+    }
+  }
+}

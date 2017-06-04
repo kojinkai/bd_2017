@@ -1,0 +1,44 @@
+@import 'styles/_breakpoints';
+@import 'headings';
+@mixin container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;  
+}
+.page-wrap {
+  @include breakpoint(medium) {
+    padding-top: 0;
+  }
+  @include breakpoint(large) {
+    padding-top: 90px;
+  }
+  position: relative;
+  line-height: 1.4;
+  background-color: $royal;
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  @include container;
+}
+
+.waypoint {
+  font-size: 1.6em;
+
+  & > div {
+    @include container;
+    margin: 0 auto 0;
+  }
+
+  .page-link {
+    font-size: .75em;
+  }
+  
+  @include breakpoint(medium) {
+    .waypoint {
+      font-size: 1.4em;
+    }
+  }
+}
