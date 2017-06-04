@@ -23,18 +23,14 @@
   @include breakpoint(medium) {
     display: none;
   }
-
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1030;
-  margin-bottom: 0;
   background-color: $white;
-
-  .container {
-    height: 90px; // Hack for sub-pages
-  }
+  height: 90px;
+  left: 0; 
+  margin-bottom: 0;  
+  position: fixed;
+  right: 0;
+  top: 0; 
+  z-index: 1030;
 
   .navigation {
     margin: 0 0 0 10%;

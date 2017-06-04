@@ -1,20 +1,29 @@
 @import 'styles/_colours';
 @import 'styles/_type';
+@import 'styles/_breakpoints';
 
 .page-link {
 
+  @include breakpoint(medium) {
+    font-size: 1.2rem;
+  }
+
   background: darken($royal, 5);
   border: 2px solid darken($royal, 5);
-  border-radius: 12px;  
+  border-radius: 10px;
   color: $white;
+  display: inline-block;
   font-family: $bodycopy;
-  font-size: .75rem;    
+  font-size: 1rem; 
   font-weight: 700;  
-  margin-bottom: 2rem;
   padding: 0.5em 1em;  
   text-decoration: none;  
   transition: all .2s ease;
 
+  &:hover {
+    cursor: pointer;
+  }
+  
   &:hover,
   &:focus {
     background: $royal; 
