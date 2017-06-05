@@ -8,14 +8,18 @@
   color: $white;
 
   &__container {
-    @include breakpoint(medium) {
-      display: block;
+    @include breakpoint(large) {
+      display: flex;
+      justify-content: space-around;
     }
-    display: flex;
-    justify-content: space-around;
+    display: block;    
   }
 
   &__skill-disc {
+
+    @include breakpoint(small) {
+      margin: 25px auto 35px;
+    }
 
     @include breakpoint(medium) {
       margin: 25px auto 35px;
@@ -23,15 +27,10 @@
   }
 
   &__skill-disc-title {
-    @include breakpoint(medium) {
-      @include pix24;
-      line-height: 142px;
-      opacity: 1;
-      position: absolute;
-    }
 
     @include breakpoint(large) {
       @include pix40;
+      line-height: 252px;
 
       .no-touch & {
         opacity: 0;
@@ -45,10 +44,12 @@
       }      
     }
 
-    display: block;
+    @include pix24;
+    display: block; 
     font-family: $headline;
-    font-weight: 700;    
-    line-height: 252px;
+    font-weight: 700;        
+    line-height: 142px;
+    opacity: 1;
     position: relative;
     text-align: center;
     text-transform: uppercase; 
@@ -58,18 +59,18 @@
 
   &__skill-disc-graphic {
 
-    @include breakpoint(medium) {
-      height: 140px;
-      width: 140px;
+    @include breakpoint(large) {
+      height: 250px;
+      width: 250px;
     }
 
     border: 12px solid $white;
     border-radius: 50%;
-    height: 250px;    
+    height: 140px;    
     margin: auto;
     position: relative;
     transition: all .3s ease;
-    width: 250px;    
+    width: 140px;    
 
     &:before,
     &:after {
@@ -151,10 +152,10 @@
     }
 
     @include breakpoint(medium) {
-      @include pix18;
+      @include pix24;
     }
 
-    @include pix24;
+    @include pix18;
     color: $white;
     font-family: $bodycopy;
     font-weight: 700;

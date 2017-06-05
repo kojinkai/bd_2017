@@ -20,9 +20,14 @@
 
 .navbar {
 
+  @include breakpoint(small) {
+    display: none;
+  }
+
   @include breakpoint(medium) {
     display: none;
   }
+
   background-color: $white;
   height: 90px;
   left: 0; 

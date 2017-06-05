@@ -11,22 +11,26 @@ class Contact extends Component {
         {
           title: 'flickr',
           className: 'icon-flickr_icon',
-          url: 'http://www.flickr.com/photos/boxdeluxe/'
+          url: 'http://www.flickr.com/photos/boxdeluxe/',
+          id: 1
         },
         {
           title: 'twitter',
           className: 'icon-twitter_icon',
-          url: 'https://twitter.com/boxdeluxe'
+          url: 'https://twitter.com/boxdeluxe',
+          id: 2
         },
         {
           title: 'github',
           className: 'icon-github_icon',
-          url: 'https://github.com/kojinkai'
+          url: 'https://github.com/kojinkai',
+          id: 3
         },
         {
           title: 'linkedin',
           className: 'icon-linkedin_icon',
-          url: 'http://www.linkedin.com/in/lewisnixon'
+          url: 'http://www.linkedin.com/in/lewisnixon',
+          id: 4
         }
       ]
     }
@@ -36,7 +40,7 @@ class Contact extends Component {
 
     const contactLinks = this.state.contactItems.map(item => {
       return (
-        <li className="contact__media-item">
+        <li className="contact__media-item" key={item.id}>
           <a href={item.url} title={item.title}>
             <b className={item.className + ' contact__item-link'}></b>
           </a>
@@ -46,7 +50,6 @@ class Contact extends Component {
 
     return (
       <section className="section contact">
-        <h2 className="section__main-title">Contact</h2>
         <div className="contact__container">
           <ul className="contact__media-list">
             {contactLinks}
