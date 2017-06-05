@@ -11,7 +11,7 @@ class Masthead extends Component {
                 <a data-scroll-target="#about" href="#about" title="A brief introduction">ABOUT</a>
               </li>
               <li>
-                <a data-scroll-target="#development" href="#development" title="go to my development skills">FRONT END</a>
+                <a data-scroll-target="#development" href="#development" title="go to my development skills">SKILLS</a>
               </li>                  
               <li>
                 <a data-scroll-target="#design" href="#design" title="go to my favoured tools">TOOLS</a>
