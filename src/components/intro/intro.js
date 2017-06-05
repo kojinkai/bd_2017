@@ -7,7 +7,7 @@ import './intro.css';
 class Intro extends Component {
   render() {
     return (
-    <section className="intro">
+    <section className="section intro">
         <div className="content">
             <div className="intro__brand">
                 <img className="intro__logo" src={logo} alt="box deluxe logo" />

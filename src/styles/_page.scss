@@ -1,5 +1,5 @@
 @import 'styles/_breakpoints';
-@import 'headings';
+@import 'styles/type';
 
 @mixin container {
   max-width: 68em;
@@ -23,4 +23,22 @@
 
 .container {
   @include container;
+}
+
+.section {
+  padding: 45px 20px 0;
+  position: relative;
+
+  &__main-title {
+
+    @include pix30;
+    font-family: $headline;
+    font-weight: 400;
+    margin-bottom: 35px;
+
+    @include breakpoint(large) {
+      @include pix40;
+    }
+
+  }
 }

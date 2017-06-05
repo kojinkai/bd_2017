@@ -5,8 +5,8 @@ import './skills.css';
 class Skills extends Component {
   render() {
     return (
-      <section className="skills">
-          <h2 className="skills__main-title">I&apos;m a Dab Hand At</h2>
+      <section className="section skills">
+          <h2 className="section__main-title">I&apos;m a Dab Hand At</h2>
           <div className="skills__container">
             <div className="skills__skill-disc">
               <div className="skills__skill-disc-graphic skills__skill-disc-graphic--html5">

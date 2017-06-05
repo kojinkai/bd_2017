@@ -4,14 +4,12 @@
 
 .intro {
 
-  @include breakpoint(medium) {
-    padding-top: 45px;
+  @include breakpoint(large) {
+    padding-top: 80px;
   }  
 
   background-color: $royal;
   color: $white;
-  padding: 80px 20px 0;
-  position: relative;
   text-align: center;
 
   &__logo {

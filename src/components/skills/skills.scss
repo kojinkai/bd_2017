@@ -6,9 +6,7 @@
 
   background-color: $orange;
   color: $white;
-  padding: 45px 20px;
-  position: relative;
-  text-align: center;  
+  text-align: center;
 
   &__container {
     @include breakpoint(medium) {
@@ -16,23 +14,12 @@
     }
     display: flex;
     justify-content: space-around;
-    margin-top: 35px;
   }
 
   &__skill-disc {
 
     @include breakpoint(medium) {
       margin: 25px auto 35px;
-    }
-
-    &:hover {
-
-      .skills__skill-disc-title {
-        .no-touch & {
-          opacity: 1;
-          top: -12px;
-        }
-      }      
     }
   }
 
@@ -46,11 +33,17 @@
 
     @include breakpoint(large) {
       @include pix40;
+
       .no-touch & {
         opacity: 0;
         top: 42px;
         transition: all .3s ease;
       }
+
+      .no-touch .skills__skill-disc:hover & {
+        opacity: 1;
+        top: -12px;
+      }      
     }
 
     display: block;
@@ -97,71 +90,59 @@
       
       &:before,
       &:after {
-        font-size: 3.5em;
-        opacity: 0;   
+        opacity: 0;
+        transform: scale(.7);
+      }
+
+      &:before {
+        left: 8%;
+      }
+
+      &:after {
+        right: 8%;
       }
     }
-
-    &--html5 {
-      &:after {
-        @include breakpoint(large) {
-          .no-touch & {
+    @include breakpoint(large) {
+      .no-touch & {
+        &--html5 {
+          &:after {
             content: '>';
             right: 14%;
             top: -15px;
           }
-        }
-      }
-      &:before {
-        @include breakpoint(large) {
-          .no-touch & {
+          &:before {
             content: '<';
             left: 14%;
             top: -15px;
           }
         }
-      }
-    }
-    &--css {
-      &:after {
-        @include breakpoint(large) {
-          .no-touch & {
+
+        &--css {
+          &:after {
             content: '}';
             right: 26%;
             top: -15px;
           }
-        }
-      }
-      &:before {
-        @include breakpoint(large) {
-          .no-touch & {
+          &:before {
             content: '{';
             left: 25%;
             top: -15px;
           }
         }
-      }
-    }
 
-    &--js {
-      &:after {
-        @include breakpoint(large) {
-          .no-touch & {
+        &--js {
+          &:after {
             content: ')';
             right: 26%;
             top: -12px;
           }
-        }
-      }
-      &:before {
-        @include breakpoint(large) {
-          .no-touch & {
+          &:before {
             content: '(';
             left: 24%;
             top: -12px;
           }
         }
-      }       
+      }
     }
   }
 
