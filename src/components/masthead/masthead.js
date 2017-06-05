@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './masthead.css';
 
 class Masthead extends Component {
@@ -8,16 +9,16 @@ class Masthead extends Component {
         <div className="container">
             <ul className="navigation" role="navigation">
               <li>
-                <a href="#about" title="A brief introduction">Intro</a>
+                <Link to="/">Intro</Link>
               </li>
               <li>
-                <a href="#development" title="go to my development skills">Skills</a>
-              </li>                  
-              <li>
-                <a href="#design" title="go to my favoured tools">Profile</a>
+                <Link to="/skills">Skills</Link>
               </li>
-              <li>   
-                <a href="#contact" title="contact me on social channels">Contact</a>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+              <li>
+                <a href="#contact" title="contact me on social channels">Profile</a>
               </li>
             </ul>
             <button type="button" className="btn btn-navbar">
