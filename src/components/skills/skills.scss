@@ -6,7 +6,6 @@
 
   background-color: $orange;
   color: $white;
-  text-align: center;
 
   &__container {
     @include breakpoint(medium) {
@@ -159,6 +158,7 @@
     color: $white;
     font-family: $bodycopy;
     font-weight: 700;
+    text-align: center;
     transition: color .3s ease;
   } 
 }

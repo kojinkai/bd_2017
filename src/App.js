@@ -3,6 +3,7 @@ import './App.css';
 import Masthead from './components/masthead/masthead';
 import Intro from './components/intro/intro';
 import Skills from './components/skills/skills';
+import Contact from './components/contact/contact';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
         <Masthead />
         <Intro />
         <Skills />
+        <Contact />
       </div>
     );
   }

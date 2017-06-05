@@ -4,11 +4,13 @@ import './scroll-button.css';
 class ScrollButton extends Component {
   render() {
     return (
-      <button 
-        aria-label="click to scroll to the development section"
-        className="icon-down_arrow scroll-button"
-        href="{this.props.scrollTo}">
-      </button>
+      <div className="scroll-button">
+        <button 
+          aria-label="click to scroll to the development section"
+          className="icon-down_arrow scroll-button__button"
+          href="{this.props.scrollTo}">
+        </button>
+      </div>
     );
   }
 }
