@@ -25,7 +25,6 @@ class Intro extends Component {
             </div>
             <PageLink text="Read more of my profile" />
         </div>
-        <ScrollButton text="scroll down" scroll-to="development"/>
     </section>
     );
   }

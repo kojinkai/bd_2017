@@ -14,6 +14,7 @@
 
   &__media-list {
     @include breakpoint(small) {
+      max-width: 20rem;
       width: 100%;
     }
 
@@ -33,7 +34,7 @@
   &__item-link {
 
     @include breakpoint(medium) {
-      font-size: 6rem;
+      font-size: 8rem;
     }
 
     @include breakpoint(small) {
@@ -41,7 +42,7 @@
     }
 
     @include breakpoint(large) {
-      font-size: 8rem;
+      font-size: 12.5rem;
     }
 
     position: relative;
