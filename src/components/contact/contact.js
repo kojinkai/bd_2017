@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ScrollButton from '../scroll-button/scroll-button';
 import logo from './boxdeluxe_footer.svg';
 import './contact.css';
 
@@ -38,7 +37,9 @@ class Contact extends Component {
     const contactLinks = this.state.contactItems.map(item => {
       return (
         <li className="contact__media-item">
-          <a href={item.url} title={item.title} className={item.className + ' contact__item-link'}></a>
+          <a href={item.url} title={item.title}>
+            <b className={item.className + ' contact__item-link'}></b>
+          </a>
         </li>
       );
     });
