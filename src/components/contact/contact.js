@@ -4,24 +4,51 @@ import logo from './boxdeluxe_footer.svg';
 import './contact.css';
 
 class Contact extends Component {
+  
+  constructor() {
+    super();
+    this.state = {
+      contactItems: [
+        {
+          title: 'flickr',
+          className: 'icon-flickr_icon',
+          url: 'http://www.flickr.com/photos/boxdeluxe/'
+        },
+        {
+          title: 'twitter',
+          className: 'icon-twitter_icon',
+          url: 'https://twitter.com/boxdeluxe'
+        },
+        {
+          title: 'github',
+          className: 'icon-github_icon',
+          url: 'https://github.com/kojinkai'
+        },
+        {
+          title: 'linkedin',
+          className: 'icon-linkedin_icon',
+          url: 'http://www.linkedin.com/in/lewisnixon'
+        }
+      ]
+    }
+  }
+
   render() {
+
+    const contactLinks = this.state.contactItems.map(item => {
+      return (
+        <li className="contact__media-item">
+          <a href={item.url} title={item.title} className={item.className + ' contact__item-link'}></a>
+        </li>
+      );
+    });
+
     return (
       <section className="section contact">
         <h2 className="section__main-title">Contact</h2>
         <div className="contact__container">
           <ul className="contact__media-list">
-            <li className="contact__media-item">
-              <a href="http://www.flickr.com/photos/boxdeluxe/" title="flickr" className="contact__item-link icon-flickr_icon"></a>
-            </li>
-            <li className="contact__media-item">
-              <a href="https://twitter.com/boxdeluxe" title="twitter" className="contact__item-link icon-twitter_icon"></a>
-            </li>
-            <li className="contact__media-item">
-              <a href="https://github.com/kojinkai" title="github" className="contact__item-link icon-github_icon"></a>
-            </li>
-            <li className="contact__media-item">
-              <a href="http://www.linkedin.com/in/lewisnixon" title="linkedin" className="contact__item-link icon-linkedin_icon"></a>
-            </li>
+            {contactLinks}
           </ul>
         </div>
         <footer className="contact__footer">
