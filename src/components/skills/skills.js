@@ -29,7 +29,6 @@ class Skills extends Component {
               </p>
             </div>            
           </div>
-          <ScrollButton text="scroll down" scroll-to="tech"/>   
       </section>
     );
   }

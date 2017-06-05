@@ -8,21 +8,21 @@ class Masthead extends Component {
         <div className="container">
             <ul className="navigation" role="navigation">
               <li>
-                <a data-scroll-target="#about" href="#about" title="A brief introduction">ABOUT</a>
+                <a href="#about" title="A brief introduction">Intro</a>
               </li>
               <li>
-                <a data-scroll-target="#development" href="#development" title="go to my development skills">SKILLS</a>
+                <a href="#development" title="go to my development skills">Skills</a>
               </li>                  
               <li>
-                <a data-scroll-target="#design" href="#design" title="go to my favoured tools">TOOLS</a>
+                <a href="#design" title="go to my favoured tools">Profile</a>
               </li>
               <li>   
-                <a data-scroll-target="#contact" href="#contact" title="contact me on social channels">CONTACT</a>
+                <a href="#contact" title="contact me on social channels">Contact</a>
               </li>
             </ul>
-          <button type="button" className="btn btn-navbar" data-toggle="collapsed" data-target=".nav-collapse">
-            Menu
-          </button>            
+            <button type="button" className="btn btn-navbar">
+              Menu
+            </button>
         </div>
       </nav>
     );
