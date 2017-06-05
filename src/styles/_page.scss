@@ -9,7 +9,7 @@
 
 .page-wrap {
   @include breakpoint(medium) {
-    padding-top: 0;
+    padding-top: 90px;
   }
   @include breakpoint(large) {
     padding-top: 90px;
@@ -26,7 +26,7 @@
 }
 
 .section {
-  padding: 45px 20px 0;
+  padding: 45px 20px;
   position: relative;
 
   &__main-title {
