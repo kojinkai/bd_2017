@@ -18,14 +18,14 @@ class Skills extends Component {
               <div className="skills__skill-disc-graphic skills__skill-disc-graphic--css">
                 <span className="skills__skill-disc-title">CSS3</span>
               </div>
-              <p className="skills__skill-description">BEM-powered and componentised
+              <p className="skills__skill-description">BEM-powered, robust, <br /> componentised and accurate
               </p>
             </div>
             <div className="skills__skill-disc">
               <div className="skills__skill-disc-graphic skills__skill-disc-graphic--js">
                 <span className="skills__skill-disc-title">ES Next</span>
               </div>
-              <p className="skills__skill-description">Modularised, decoupled, <br />elegant and testable
+              <p className="skills__skill-description">Modular, decoupled, <br />elegant and testable
               </p>
             </div>            
           </div>

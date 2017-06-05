@@ -35,6 +35,7 @@
     font-family: $headline;
     font-weight: 400;
     margin-bottom: 35px;
+    text-align: center;
 
     @include breakpoint(large) {
       @include pix40;

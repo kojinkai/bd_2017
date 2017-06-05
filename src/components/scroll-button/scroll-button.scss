@@ -1,20 +1,23 @@
 @import 'styles/_colours';
 
 .scroll-button {
-  bottom: 1.5em;
-  background: transparent;
-  border: 0;
-  color: $white;
-  font-size: 1.625rem;
   margin-top: 2rem;  
-  padding: 1rem;
-  -webkit-appearance: none;
+  text-align: center;
+  &__button {
+    bottom: 1.5em;
+    background: transparent;
+    border: 0;
+    color: $white;
+    font-size: 1.625rem;
+    padding: 1rem;
+    -webkit-appearance: none;
 
-  &::hover {
-    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      border: 1px solid $white;
+    }
   }
-
-  ::focus {
-    border: 1px solid $white;
-  }  
 }
