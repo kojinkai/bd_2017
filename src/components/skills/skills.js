@@ -8,21 +8,21 @@ class Skills extends Component {
       <section className="skills">
           <h2 className="skills__main-title">I&apos;m a Dab Hand At</h2>
           <div className="skills__container">
-            <div className="skills__html5 skills__skill-disc">
-              <div className="skills__skill-disc-graphic">
+            <div className="skills__skill-disc">
+              <div className="skills__skill-disc-graphic skills__skill-disc-graphic--html5">
                 <span className="skills__skill-disc-title">HTML5</span>
               </div>
               <p className="skills__skill-description">Semantic, descriptive, <br />uncluttered and compliant</p>
             </div>
-            <div className="skills__css skills__skill-disc">
-              <div className="skills__skill-disc-graphic">
+            <div className="skills__skill-disc">
+              <div className="skills__skill-disc-graphic skills__skill-disc-graphic--css">
                 <span className="skills__skill-disc-title">CSS3</span>
               </div>
               <p className="skills__skill-description">BEM-powered and componentised
               </p>
             </div>
-            <div className="skills__js skills__skill-disc">
-              <div className="skills__skill-disc-graphic">
+            <div className="skills__skill-disc">
+              <div className="skills__skill-disc-graphic skills__skill-disc-graphic--js">
                 <span className="skills__skill-disc-title">ES Next</span>
               </div>
               <p className="skills__skill-description">Modularised, decoupled, <br />elegant and testable

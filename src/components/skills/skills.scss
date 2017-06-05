@@ -81,6 +81,7 @@
 
     &:before,
     &:after {
+      content: '';
       font-size: 6em;
       font-weight: bold;
       line-height: 252px;
@@ -99,14 +100,68 @@
         font-size: 3.5em;
         opacity: 0;   
       }
+    }
 
-      &:before {
-        left: 3%;
-      }
-
+    &--html5 {
       &:after {
-        right: 3%;
+        @include breakpoint(large) {
+          .no-touch & {
+            content: '>';
+            right: 14%;
+            top: -15px;
+          }
+        }
       }
+      &:before {
+        @include breakpoint(large) {
+          .no-touch & {
+            content: '<';
+            left: 14%;
+            top: -15px;
+          }
+        }
+      }
+    }
+    &--css {
+      &:after {
+        @include breakpoint(large) {
+          .no-touch & {
+            content: '}';
+            right: 26%;
+            top: -15px;
+          }
+        }
+      }
+      &:before {
+        @include breakpoint(large) {
+          .no-touch & {
+            content: '{';
+            left: 25%;
+            top: -15px;
+          }
+        }
+      }
+    }
+
+    &--js {
+      &:after {
+        @include breakpoint(large) {
+          .no-touch & {
+            content: ')';
+            right: 26%;
+            top: -12px;
+          }
+        }
+      }
+      &:before {
+        @include breakpoint(large) {
+          .no-touch & {
+            content: '(';
+            left: 24%;
+            top: -12px;
+          }
+        }
+      }       
     }
   }
 
@@ -124,86 +179,5 @@
     font-family: $bodycopy;
     font-weight: 700;
     transition: color .3s ease;
-  }  
-
-  &__html5 {
-    .skills__skill-disc-graphic {
-      &:after {
-        content: '';
-
-        @include breakpoint(large) {
-          .no-touch & {
-            content: '>';
-            right: 14%;
-            top: -15px;
-          }
-        }
-      }
-      &:before {
-        content: '';
-  
-        @include breakpoint(large) {
-          .no-touch & {
-            content: '<';
-            left: 14%;
-            top: -15px;
-          }
-        }
-      }      
-    }
-  }
-
-  &__css {
-    .skills__skill-disc-graphic {
-      &:after {
-        content: '';
-        
-        @include breakpoint(large) {
-          .no-touch & {
-            content: '}';
-            right: 26%;
-            top: -15px;
-          }
-        }
-      }
-      &:before {
-        content: '';
-
-        @include breakpoint(large) {
-          .no-touch & {
-            content: '{';
-            left: 25%;
-            top: -15px;
-          }
-        }
-      }      
-    }
-  }
-
-  &__js {
-    .skills__skill-disc-graphic {
-      &:after {
-        content: '';
-
-        @include breakpoint(large) {
-          .no-touch & {
-            content: ')';
-            right: 26%;
-            top: -12px;
-          }
-        }
-      }
-      &:before {
-        content: '';
-
-        @include breakpoint(large) {
-          .no-touch & {
-            content: '(';
-            left: 24%;
-            top: -12px;
-          }
-        }
-      }      
-    }
-  }  
+  } 
 }
