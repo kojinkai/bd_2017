@@ -26,26 +26,12 @@
     }
 
     &:hover {
-      & > .skills__skill-disc-graphic {
 
-        color: $white;
-        
-        &:before,
-        &:after {
-          font-size: 3.5em;
-          opacity: 0;   
-        }
-
-        &:before {
-          left: 7%;
-        }
-
-        &:after {
-          right: 7%;
-        }
-      }
       .skills__skill-disc-title {
-        opacity: 1;
+        .no-touch & {
+          opacity: 1;
+          top: -12px;
+        }
       }      
     }
   }
@@ -57,18 +43,25 @@
       opacity: 1;
       position: absolute;
     }
-    @include pix30;
+
+    @include breakpoint(large) {
+      @include pix40;
+      .no-touch & {
+        opacity: 0;
+        top: 42px;
+        transition: all .3s ease;
+      }
+    }
+
     display: block;
     font-family: $headline;
     font-weight: 700;    
     line-height: 252px;
-    opacity: 0;    
     position: relative;
     text-align: center;
     text-transform: uppercase; 
     top: -12px;
-    transition: all .3s ease;
-    width: 100%;    
+    width: 100%;
   }
 
   &__skill-disc-graphic {
@@ -88,7 +81,7 @@
 
     &:before,
     &:after {
-      font-size: 4em;
+      font-size: 6em;
       font-weight: bold;
       line-height: 252px;
       opacity: 1;      
@@ -96,6 +89,24 @@
       top: -12px;
       transition: all .3s ease;
       z-index: 100;       
+    }
+
+    .skills__skill-disc:hover & {
+      color: $white;
+      
+      &:before,
+      &:after {
+        font-size: 3.5em;
+        opacity: 0;   
+      }
+
+      &:before {
+        left: 3%;
+      }
+
+      &:after {
+        right: 3%;
+      }
     }
   }
 
@@ -118,20 +129,26 @@
   &__html5 {
     .skills__skill-disc-graphic {
       &:after {
-        @include breakpoint(medium) {
-          content: '';      
-        }        
-        content: '>';
-        right: 14%;
-        top: -15px;
+        content: '';
+
+        @include breakpoint(large) {
+          .no-touch & {
+            content: '>';
+            right: 14%;
+            top: -15px;
+          }
+        }
       }
       &:before {
-        @include breakpoint(medium) {
-          content: '';      
-        }        
-        content: '<';
-        left: 14%;
-        top: -15px;
+        content: '';
+  
+        @include breakpoint(large) {
+          .no-touch & {
+            content: '<';
+            left: 14%;
+            top: -15px;
+          }
+        }
       }      
     }
   }
@@ -139,20 +156,26 @@
   &__css {
     .skills__skill-disc-graphic {
       &:after {
-        @include breakpoint(medium) {
-          content: '';
-        }        
-        content: '}';
-        right: 26%;
-        top: -15px;
+        content: '';
+        
+        @include breakpoint(large) {
+          .no-touch & {
+            content: '}';
+            right: 26%;
+            top: -15px;
+          }
+        }
       }
       &:before {
-        @include breakpoint(medium) {
-          content: '';
-        }        
-        content: '{';
-        left: 25%;
-        top: -15px;
+        content: '';
+
+        @include breakpoint(large) {
+          .no-touch & {
+            content: '{';
+            left: 25%;
+            top: -15px;
+          }
+        }
       }      
     }
   }
@@ -160,20 +183,26 @@
   &__js {
     .skills__skill-disc-graphic {
       &:after {
-        @include breakpoint(medium) {
-          content: '';
+        content: '';
+
+        @include breakpoint(large) {
+          .no-touch & {
+            content: ')';
+            right: 26%;
+            top: -12px;
+          }
         }
-        content: ')';
-        right: 26%;
-        top: -12px;
       }
       &:before {
-        @include breakpoint(medium) {
-          content: '';
+        content: '';
+
+        @include breakpoint(large) {
+          .no-touch & {
+            content: '(';
+            left: 24%;
+            top: -12px;
+          }
         }
-        content: '(';
-        left: 24%;
-        top: -12px;
       }      
     }
   }  
