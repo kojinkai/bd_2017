@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ScrollButton from '../scroll-button/scroll-button';
 import './skills.css';
 
 class Skills extends Component {

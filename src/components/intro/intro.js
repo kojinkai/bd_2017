@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PageLink from '../page-link/page-link';
-import ScrollButton from '../scroll-button/scroll-button';
 import logo from './boxdeluxe_logo.svg';
 import './intro.css';
 
