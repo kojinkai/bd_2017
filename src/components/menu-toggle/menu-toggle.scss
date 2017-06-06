@@ -1,0 +1,19 @@
+@import 'styles/_colours';
+@import 'styles/_breakpoints';
+
+.menu-toggle {
+
+  @include breakpoint(small) {
+    display: block;
+  }
+
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+
+  &__icon {
+    color: $white;
+    font-size: 20px;
+  }
+}

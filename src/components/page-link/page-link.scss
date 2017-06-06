@@ -4,19 +4,23 @@
 
 .page-link {
 
+  @include breakpoint(small) {
+    border: 2px solid $offwhite;
+  }
+
   @include breakpoint(medium) {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
 
   background: darken($royal, 5);
   border: 2px solid darken($royal, 5);
-  border-radius: 10px;
+  border-radius: 8px;
   color: $white;
   display: inline-block;
   font-family: $bodycopy;
-  font-size: 1rem; 
+  font-size: 1.2rem; 
   font-weight: 700;  
-  padding: 0.5em 1em;  
+  padding: 0.8em;  
   text-decoration: none;  
   transition: all .2s ease;
 

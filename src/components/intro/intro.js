@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PageLink from '../page-link/page-link';
+import MenuToggle from '../menu-toggle/menu-toggle';
 import logo from './boxdeluxe_logo.svg';
 import './intro.css';
 
@@ -7,6 +8,7 @@ class Intro extends Component {
   render() {
     return (
     <section className="section intro">
+        <MenuToggle />
         <div className="content">
             <div className="intro__brand">
                 <img className="intro__logo" src={logo} alt="box deluxe logo" />
