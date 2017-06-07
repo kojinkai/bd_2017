@@ -21,9 +21,6 @@ class Masthead extends Component {
                 <Link to="/contact">Contact</Link>
               </li>
             </ul>
-            <button type="button" className="btn btn-navbar">
-              Menu
-            </button>
         </div>
       </nav>
     );
