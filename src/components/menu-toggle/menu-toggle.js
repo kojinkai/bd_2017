@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './menu-toggle.css';
 
 class MenuToggle extends Component {
-  
-  handleClick() {
-    console.log('foo menu toggle');
-  }
 
   render() {
     return (

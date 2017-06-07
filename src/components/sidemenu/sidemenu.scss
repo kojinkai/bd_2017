@@ -3,15 +3,39 @@
 @import 'styles/_breakpoints';
 
 .sidemenu {
-  background-color: #333a4a;
+  background: $darkgrey;  
+  bottom: 0;
   overflow: scroll;
-  padding-top: 0;
-  user-select: none;  
-  -webkit-overflow-scrolling: touch;
+  left: 0; 
+  position: absolute; 
+  right: 0;
+  top: 0;
+
+  &__view {
+    bottom: 0;
+    overflow: scroll;
+    left: 0; 
+    overflow: scroll;
+    position: absolute; 
+    right: 0;
+    top: 0;
+    transition: transform .2s ease-out;
+    user-select: none;  
+    -webkit-overflow-scrolling: touch;    
+  }
+
+  &__nav {
+    background-color: #333a4a;
+    bottom: 0;
+    left: 0; 
+    padding: 0 20px 0;
+    position: absolute; 
+    right: 0;
+    top: 0; 
+  }
 
   &__list {
     list-style: none;
-    margin-left: -20px;
   }
 
   &__item {
