@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MenuToggle from '../menu-toggle/menu-toggle';
 import './sidemenu.css';
 
