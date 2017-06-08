@@ -19,7 +19,7 @@ class Profile extends Component {
               <p className="profile__text">I like to adopt a test-driven approach to development. I believe that this produces better software design and helps test your understanding of the requirements before diving into a feature.</p>
               <p className="profile__text">When done well, TDD helps with continous delivery efforts by closing feedback loops early and shortening release cycles and therefore contributes to an enjoyable, high-performance working culture.</p>
               <p className="profile__text">I advocate integrating my work regularly and keeping batch sizes small to improve overall agility and lessen the pain of root cause analysis when things go wrong.</p>
-              <p className="profile__text">I really enjoy what I do and I'm motivated by working with others who do too.</p>
+              <p className="profile__text">I really enjoy what I do and I&apos;m motivated by working with others who do too.</p>
             </div>
         </div>
       </section>
