@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './page-link.css';
 
 class Button extends Component {
   render() {
     return (
-      <a className="page-link">{this.props.text}</a>
+      <span className="page-link">
+        <Link to="/profile">{this.props.text}</Link>
+      </span>
     );
   }
 }

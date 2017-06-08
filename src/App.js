@@ -8,6 +8,7 @@ import Masthead from './components/masthead/masthead';
 import Sidemenu from './components/sidemenu/sidemenu';
 import Intro from './components/intro/intro';
 import Skills from './components/skills/skills';
+import Profile from './components/profile/profile';
 import Contact from './components/contact/contact';
 
 class App extends Component { 
@@ -19,8 +20,9 @@ class App extends Component {
           <Masthead />
           <Sidemenu>
             <Route exact path="/" component={Intro} />
-            <Route path="/skills" component={Skills}/>
-            <Route path="/contact" component={Contact}/>
+            <Route path="/skills" component={Skills} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/contact" component={Contact} />
           </Sidemenu>          
         </div>
       </Router>
