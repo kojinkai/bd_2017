@@ -12,33 +12,32 @@ class Sidemenu extends Component {
 
     this.state = {
       sidemenuIsOpen: false,
-      styles: {
-        viewPanel: {
-          transform: 'translateX(0%)',
-          WebkitTransform: 'translateX(0%)',
-        }
-      }
     };
 
     this.handleSidemenuToggle = this.handleSidemenuToggle.bind(this);
   }
 
   handleSidemenuToggle(open) {
-    const transitionAmount = this.state.sidemenuIsOpen ? '0px' : '300px';
 
     this.setState({
-      sidemenuIsOpen: !this.state.sidemenuIsOpen,
-      styles: {
-        viewPanel: {
-          transform: `translateX(${transitionAmount})`,
-          WebkitTransform: `translateX(${transitionAmount})`
-        }
-      }
+      sidemenuIsOpen: !this.state.sidemenuIsOpen
     });
 
   }
 
   render() {
+
+    let viewPanelStyles = {
+      transform: 'translateX(0%)',
+      WebkitTransform: 'translateX(0%)'
+    }
+
+    if (this.state.sidemenuIsOpen) {
+      viewPanelStyles = {
+        transform: 'translateX(300px)',
+        WebkitTransform: 'translateX(300px)'
+      }
+    }
 
     return (
       <div className="sidemenu">
@@ -70,7 +69,14 @@ class Sidemenu extends Component {
             </li>
           </ul>
         </nav>
-        <div className="sidemenu__view" style={this.state.styles.viewPanel}>
+        <div
+          className="sidemenu__view" 
+          style={viewPanelStyles}
+          onTouchStart={this.handleTouchStart}
+          onTouchMove={this.handleTouchMove}
+          onTouchEnd={this.handleTouchEnd}
+          onTouchCancel={this.handleTouchEnd}>
+
           <MenuToggle toggle={this.handleSidemenuToggle}/>
           {this.props.children}
         </div>
