@@ -75,7 +75,7 @@ class Sidemenu extends Component {
           onTouchEnd={this.handleTouchEnd}
           onTouchCancel={this.handleTouchEnd}>
 
-          <MenuToggle toggle={this.handleSidemenuToggle}/>
+          <MenuToggle toggle={this.handleSidemenuToggle} active={this.state.sidemenuIsOpen}/>
           {this.props.children}
         </div>
       </div>
