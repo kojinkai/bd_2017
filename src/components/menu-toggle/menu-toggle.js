@@ -4,9 +4,18 @@ import './menu-toggle.css';
 class MenuToggle extends Component {
 
   render() {
+
+    const classList = [
+      'menu-toggle__icon'
+    ];
+
+    if (this.props.active) {
+      classList.push('active');
+    }
+
     return (
       <button className="menu-toggle" onClick={this.props.toggle}>
-        <b className="menu-toggle__icon icon-list2"></b>
+        <span className={classList.join(' ')}></span>
       </button>
     );
   }
