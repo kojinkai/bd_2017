@@ -5,20 +5,20 @@ import './masthead.css';
 class Masthead extends Component {
   render() {
     return (
-      <nav className="navbar">
+      <nav className="masthead">
         <div className="container">
-            <ul className="navigation" role="navigation">
-              <li>
-                <Link to="/">Intro</Link>
+            <ul className="masthead__navigation" role="navigation">
+              <li className="masthead__item">
+                <Link to="/intro" className={`masthead__link ${this.props.activeroute === 'intro' ? 'active' : ''}`}>Intro</Link>
               </li>
-              <li>
-                <Link to="/skills">Skills</Link>
+              <li className="masthead__item">
+                <Link to="/skills" className={`masthead__link ${this.props.activeroute === 'skills' ? 'active' : ''}`}>Skills</Link>
               </li>                  
-              <li>
-                <Link to="/profile">Profile</Link>
+              <li className="masthead__item">
+                <Link to="/profile" className={`masthead__link ${this.props.activeroute === 'profile' ? 'active' : ''}`}>Profile</Link>
               </li>
-              <li>   
-                <Link to="/contact">Contact</Link>
+              <li className="masthead__item"> 
+                <Link to="/contact" className={`masthead__link ${this.props.activeroute === 'contact' ? 'active' : ''}`}>Contact</Link>
               </li>
             </ul>
         </div>
