@@ -4,6 +4,10 @@
 
 .skills {
 
+  @include breakpoint(small) {
+    padding-bottom: 0;
+  }
+
   background-color: $orange;
   color: $white;
 
@@ -18,7 +22,7 @@
   &__skill-disc {
 
     @include breakpoint(small) {
-      margin: 25px auto 35px;
+      margin: 25px auto;
     }
 
     @include breakpoint(medium) {
