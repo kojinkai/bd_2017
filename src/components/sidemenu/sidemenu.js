@@ -34,8 +34,8 @@ class Sidemenu extends Component {
 
     if (this.state.sidemenuIsOpen) {
       viewPanelStyles = {
-        transform: 'translateX(300px)',
-        WebkitTransform: 'translateX(300px)'
+        transform: 'translateX(80%)',
+        WebkitTransform: 'translateX(80%)'
       }
     }
 
@@ -44,7 +44,7 @@ class Sidemenu extends Component {
         <nav className="sidemenu__nav">
           <ul className="sidemenu__list" role="navigation">
             <li className="sidemenu__item">
-              <Link to="/" onClick={this.handleSidemenuToggle}>
+              <Link to="/intro" onClick={this.handleSidemenuToggle}>
                 Intro
                 <b className="sidemenu__icon icon-quotes-left"></b>
               </Link>
