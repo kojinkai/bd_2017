@@ -9,7 +9,7 @@ class Masthead extends Component {
         <div className="container">
             <ul className="masthead__navigation" role="navigation">
               <li className="masthead__item">
-                <Link to="/" className={`masthead__link ${this.props.activeroute === 'intro' ? 'active' : ''}`}>Intro</Link>
+                <Link to="/intro" className={`masthead__link ${this.props.activeroute === 'intro' ? 'active' : ''}`}>Intro</Link>
               </li>
               <li className="masthead__item">
                 <Link to="/skills" className={`masthead__link ${this.props.activeroute === 'skills' ? 'active' : ''}`}>Skills</Link>
