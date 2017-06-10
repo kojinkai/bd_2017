@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
-  Route
+  Route,
+  Redirect,
 } from 'react-router-dom';
 import './App.css';
 import Masthead from './components/masthead/masthead';
@@ -33,9 +34,10 @@ class App extends Component {
         <div className="page-wrap">
           <Route render={({ location }) => (
             <div>
+              <Redirect to="/intro" />            
               <Masthead activeroute={location.pathname.substr(1)} />
               <Sidemenu activeroute={location.pathname.substr(1)} routecolors={getRouteColorFromLocation}>
-                <Route exact path="/" component={Intro} />
+                <Route path="/intro" component={Intro} />
                 <Route path="/skills" component={Skills} />
                 <Route path="/profile" component={Profile} />
                 <Route path="/contact" component={Contact} />
