@@ -13,19 +13,20 @@
 
   &__view {
     bottom: 0;
+    box-shadow: -3px 0 9px 2px #2b3448;
     overflow: scroll;
     left: 0; 
     overflow: scroll;
     position: absolute; 
     right: 0;
     top: 0;
-    transition: transform .2s ease-out;
+    transition: transform .28s ease-out;
     user-select: none;  
     -webkit-overflow-scrolling: touch;    
   }
 
   &__nav {
-    background-color: #333a4a;
+    background-color: #3b414e;
     bottom: 0;
     left: 0; 
     position: absolute; 
