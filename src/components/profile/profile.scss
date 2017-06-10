@@ -12,7 +12,7 @@
     display: block;
     height: auto;
     margin: 0 auto;
-    padding: 0 15px 50px;
+    padding: 0 15px 30px;
     border-bottom: 1px solid $white;
     max-width: 21rem;
   }
@@ -36,6 +36,10 @@
 
     &:last-child {
       margin-bottom: 50px;
+    }
+
+    &:first-child {
+      margin-top: 0;
     }
   }
 

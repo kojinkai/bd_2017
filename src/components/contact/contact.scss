@@ -5,6 +5,9 @@
 .contact {
   background-color: $darkgrey;
   color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   
   &__container {
     @include breakpoint(medium) {
