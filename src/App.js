@@ -33,8 +33,8 @@ class App extends Component {
         <div className="page-wrap">
           <Route render={({ location }) => (
             <div>
-              <Masthead />
-              <Sidemenu pathname={location.pathname.substr(1)} routecolors={getRouteColorFromLocation}>
+              <Masthead activeroute={location.pathname.substr(1)} />
+              <Sidemenu activeroute={location.pathname.substr(1)} routecolors={getRouteColorFromLocation}>
                 <Route exact path="/" component={Intro} />
                 <Route path="/skills" component={Skills} />
                 <Route path="/profile" component={Profile} />

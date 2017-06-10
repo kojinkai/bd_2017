@@ -25,7 +25,7 @@ class Sidemenu extends Component {
 
   render() {
 
-    const backgroundColor = this.props.routecolors(this.props.pathname);
+    const backgroundColor = this.props.routecolors(this.props.activeroute);
 
     let viewPanelStyles = {
       transform: 'translateX(0%)',

@@ -3,22 +3,7 @@
 @import 'styles/_box-model';
 @import 'styles/_breakpoints';
 
-
-.navigation {
-  @include clearfix;
-  list-style: none;
-  padding-left: 0;
-
-  & > li {
-    list-style: none;
-    float: left;
-    a {
-      cursor: pointer;
-    }
-  }
-}
-
-.navbar {
+.masthead {
 
   @include breakpoint(small) {
     display: none;
@@ -33,63 +18,70 @@
   top: 0; 
   z-index: 1030;
 
-  .navigation {
+
+
+  &__navigation {
+    @include clearfix;
+    list-style: none;
     margin: 0 0 0 10%;
+    padding-left: 0; 
     width: 80%;
   }
 
-  .navigation > li {
+  &__item {
+    list-style: none;    
     float: left;
     width: 25%;
+  }
 
-    & > a {
-      display: block;
-      font-family: $bodycopy;
-      font-weight: 700;
-      text-align: center;      
-      margin: 0;
-      padding: 10px 0;
-      color: $royal;
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 70px;
-      @include pix18;
-      &:hover,
-      &:focus,
-      &:active {
-        outline: none;
-      }
+  &__link {
+    @include pix18;
+    color: $royal;
+    cursor: pointer;
+    display: block;
+    font-family: $bodycopy;
+    font-weight: 700;
+    line-height: 70px;      
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;      
+    text-transform: uppercase;
+
+    &:visited {
+      color: $royal;      
     }
-  }
-}
 
-.navbar li a {
-  &:before,
-  &:after {
-    // not sure if bourbon supports
-    // multiple transitions hence the fallback to longhand declarations
-    display: inline-block;
-    opacity: 0;
-    position: relative;
-    bottom: 1px;
-    transition: transform 0.3s, opacity 0.2s;
-  }
-  &:before {
-    content: '{';
-    margin-right: 10px;
-    transform: translateX(20px); 
-  }
-  &:after {
-    content: '}';
-    margin-left: 10px;
-    transform: translateX(-20px);
-  }    
-  &:hover,
-  &:focus {
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      outline: none;
+
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+    }
+
     &:before,
     &:after {
-      opacity: 1;
-      transform: translateX(0);
+      display: inline-block;
+      opacity: 0;
+      position: relative;
+      bottom: 1px;
+      transition: transform 0.3s, opacity 0.2s;
     }
-  }    
+    &:before {
+      content: '{';
+      margin-right: 10px;
+      transform: translateX(20px); 
+    }
+    &:after {
+      content: '}';
+      margin-left: 10px;
+      transform: translateX(-20px);
+    }
+  }
 }
