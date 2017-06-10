@@ -13,7 +13,7 @@
 
   &__view {
     bottom: 0;
-    box-shadow: -3px 0 9px 2px #2b3448;
+    box-shadow: -3px 0 9px 2px $menushadow;
     overflow: scroll;
     left: 0; 
     overflow: scroll;
@@ -26,7 +26,7 @@
   }
 
   &__nav {
-    background-color: #3b414e;
+    background-color: $navbg;
     bottom: 0;
     left: 0; 
     position: absolute; 
@@ -40,7 +40,7 @@
 
   &__item {
     @include pix22;
-    border-bottom: 1px solid #5f636b;
+    border-bottom: 1px solid $menuitemborder;
     font-family: $bodycopy;
     font-weight: 700;
     line-height: 1.875rem;
