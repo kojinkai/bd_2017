@@ -47,6 +47,27 @@
     text-align: center;      
     text-transform: uppercase;
 
+    &:before,
+    &:after {
+      display: inline-block;
+      opacity: 0;
+      position: relative;
+      bottom: 1px;
+      transition: transform 0.3s, opacity 0.2s;
+    }
+
+    &:before {
+      content: '{';
+      margin-right: 10px;
+      transform: translateX(20px); 
+    }
+
+    &:after {
+      content: '}';
+      margin-left: 10px;
+      transform: translateX(-20px);
+    }
+
     &:visited {
       color: $royal;      
     }
@@ -63,25 +84,6 @@
         transform: translateX(0);
       }
 
-    }
-
-    &:before,
-    &:after {
-      display: inline-block;
-      opacity: 0;
-      position: relative;
-      bottom: 1px;
-      transition: transform 0.3s, opacity 0.2s;
-    }
-    &:before {
-      content: '{';
-      margin-right: 10px;
-      transform: translateX(20px); 
-    }
-    &:after {
-      content: '}';
-      margin-left: 10px;
-      transform: translateX(-20px);
-    }
+    }    
   }
 }
