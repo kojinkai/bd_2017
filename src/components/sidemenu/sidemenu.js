@@ -25,6 +25,8 @@ class Sidemenu extends Component {
 
   render() {
 
+    const backgroundColor = this.props.routecolors(this.props.pathname);
+
     let viewPanelStyles = {
       transform: 'translateX(0%)',
       WebkitTransform: 'translateX(0%)'
@@ -39,7 +41,7 @@ class Sidemenu extends Component {
 
     return (
       <div className="sidemenu">
-        <nav className="sidemenu">
+        <nav className="sidemenu__nav">
           <ul className="sidemenu__list" role="navigation">
             <li className="sidemenu__item">
               <Link to="/" onClick={this.handleSidemenuToggle}>
@@ -69,13 +71,13 @@ class Sidemenu extends Component {
         </nav>
         <div
           className="sidemenu__view" 
-          style={viewPanelStyles}
-          onTouchStart={this.handleTouchStart}
-          onTouchMove={this.handleTouchMove}
-          onTouchEnd={this.handleTouchEnd}
-          onTouchCancel={this.handleTouchEnd}>
+          style={viewPanelStyles}>
 
-          <MenuToggle toggle={this.handleSidemenuToggle} active={this.state.sidemenuIsOpen}/>
+          <MenuToggle 
+            toggle={this.handleSidemenuToggle} 
+            active={this.state.sidemenuIsOpen}
+            color={backgroundColor}
+          />
           {this.props.children}
         </div>
       </div>

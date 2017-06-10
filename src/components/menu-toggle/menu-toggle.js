@@ -14,9 +14,11 @@ class MenuToggle extends Component {
     }
 
     return (
-      <button className="menu-toggle" onClick={this.props.toggle}>
-        <span className={classList.join(' ')}></span>
-      </button>
+      <div className="menu-toggle" style={{background: this.props.color}}>
+        <button className="menu-toggle__button" onClick={this.props.toggle}>
+          <span className={classList.join(' ')}></span>
+        </button>
+      </div>
     );
   }
 }

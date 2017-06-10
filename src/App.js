@@ -11,19 +11,37 @@ import Skills from './components/skills/skills';
 import Profile from './components/profile/profile';
 import Contact from './components/contact/contact';
 
-class App extends Component { 
+class App extends Component {
+
+  _getRouteColor(colorMap) {
+    return (location) => {
+      return colorMap[location];
+    }
+  }
 
   render() {
+
+    const getRouteColorFromLocation = this._getRouteColor({
+      intro: '#2e4066',
+      skills: '#f05000',
+      profile: '#2e4066',
+      contact: '#9ca2ad'
+    });
+
     return (
       <Router>
         <div className="page-wrap">
-          <Masthead />
-          <Sidemenu>
-            <Route exact path="/" component={Intro} />
-            <Route path="/skills" component={Skills} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/contact" component={Contact} />
-          </Sidemenu>          
+          <Route render={({ location }) => (
+            <div>
+              <Masthead />
+              <Sidemenu pathname={location.pathname.substr(1)} routecolors={getRouteColorFromLocation}>
+                <Route exact path="/" component={Intro} />
+                <Route path="/skills" component={Skills} />
+                <Route path="/profile" component={Profile} />
+                <Route path="/contact" component={Contact} />
+              </Sidemenu>
+            </div>
+            )}/>
         </div>
       </Router>
     );
