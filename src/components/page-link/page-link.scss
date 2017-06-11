@@ -9,10 +9,8 @@
   }
 
   background: darken($royal, 5);
-  border-color: $white;
+  border: 2px solid $white;
   border-radius: 8px;
-  border-style: solid;
-  border-width: 2px;
   color: $white;
   display: inline-block;
   font-family: $bodycopy;
