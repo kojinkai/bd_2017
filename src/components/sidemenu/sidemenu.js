@@ -27,16 +27,22 @@ class Sidemenu extends Component {
 
     const backgroundColor = this.props.routecolors(this.props.activeroute);
 
-    let viewPanelStyles = {
-      transform: 'translateX(0%)',
-      WebkitTransform: 'translateX(0%)'
+    let viewPanelProps = {
+      className: 'sidemenu__view',
+      style: {
+        transform: 'translateX(0%)',
+        WebkitTransform: 'translateX(0%)'
+      }
     }
 
     if (this.state.sidemenuIsOpen) {
-      viewPanelStyles = {
-        transform: 'translateX(80%)',
-        WebkitTransform: 'translateX(80%)'
-      }
+      viewPanelProps = Object.assign(viewPanelProps, {
+        style: {
+          transform: 'translateX(80%)',
+          WebkitTransform: 'translateX(80%)'
+        },
+        onClick: this.handleSidemenuToggle
+      });
     }
 
     return (
@@ -69,9 +75,7 @@ class Sidemenu extends Component {
             </li>
           </ul>
         </nav>
-        <div
-          className="sidemenu__view" 
-          style={viewPanelStyles}>
+        <div {...viewPanelProps}>
 
           <MenuToggle 
             toggle={this.handleSidemenuToggle} 
