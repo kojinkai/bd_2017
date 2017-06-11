@@ -13,10 +13,13 @@
 
   &__container {
     @include breakpoint(large) {
-      display: flex;
-      justify-content: space-around;
+      flex-direction: row;
+      margin-top: 6.25rem;
     }
-    display: block;    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
   }
 
   &__skill-disc {
