@@ -69,13 +69,14 @@
     }
 
     &:visited {
-      color: $royal;      
+      color: $royal; 
     }
 
     &:hover,
     &:focus,
     &:active,
     &.active {
+      color: $royal;
       outline: none;
 
       &:before,
