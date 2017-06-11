@@ -27,7 +27,7 @@ class Sidemenu extends Component {
 
     const backgroundColor = this.props.routecolors(this.props.activeroute);
 
-    const viewPanelProps = {
+    let viewPanelProps = {
       className: 'sidemenu__view',
       style: {
         transform: 'translateX(0%)',
@@ -36,11 +36,13 @@ class Sidemenu extends Component {
     }
 
     if (this.state.sidemenuIsOpen) {
-      viewPanelProps.style = {
-        transform: 'translateX(80%)',
-        WebkitTransform: 'translateX(80%)'
-      }
-      viewPanelProps.onClick = this.handleSidemenuToggle;
+      viewPanelProps = Object.assign(viewPanelProps, {
+        style: {
+          transform: 'translateX(80%)',
+          WebkitTransform: 'translateX(80%)'
+        },
+        onClick: this.handleSidemenuToggle
+      });
     }
 
     return (
