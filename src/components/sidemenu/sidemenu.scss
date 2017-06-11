@@ -41,6 +41,7 @@
   &__item {
     @include pix22;
     border-bottom: 1px solid $menuitemborder;
+    color: $white;
     font-family: $bodycopy;
     font-weight: 700;
     line-height: 1.875rem;
