@@ -4,17 +4,15 @@
 
 .page-link {
 
-  @include breakpoint(small) {
-    border: 2px solid $offwhite;
-  }
-
   @include breakpoint(medium) {
     font-size: 1.5rem;
   }
 
   background: darken($royal, 5);
-  border: 2px solid darken($royal, 5);
+  border-color: $white;
   border-radius: 8px;
+  border-style: solid;
+  border-width: 2px;
   color: $white;
   display: inline-block;
   font-family: $bodycopy;
@@ -30,8 +28,8 @@
   
   &:hover,
   &:focus {
-    background: $royal; 
-    border: 2px solid $white;
+    background: darken($royal, 10);
+    border-color: darken($royal, 10);
     outline: 0;
     text-decoration: none;    
   }
