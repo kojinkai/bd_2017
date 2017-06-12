@@ -9,10 +9,3 @@ before_script:
 script:
   - npm test
   - npm run build
-
-deploy:
-  provider: script
-  skip_cleanup: true
-  script: scripts/deploy.sh $TRAVIS_TAG
-  on:
-    branch: feat/ci-server
