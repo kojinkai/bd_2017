@@ -12,6 +12,7 @@ script:
 
 deploy:
   provider: script
-  script: deploy.sh $TRAVIS_TAG
+  skip_cleanup: true
+  script: scripts/deploy.sh $TRAVIS_TAG
   on:
     branch: feat/ci-server
