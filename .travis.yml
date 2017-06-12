@@ -13,4 +13,5 @@ script:
 deploy:
   provider: script
   script: deploy.sh $TRAVIS_TAG
-  all_branches: true
+  on:
+    branch: feat/ci-server
