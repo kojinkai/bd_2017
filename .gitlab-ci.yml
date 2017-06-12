@@ -1,0 +1,21 @@
+stages:
+  - build
+  - deploy
+
+before_script:
+  - yarn config set cache-folder .yarn
+  - yarn
+  - npm run build-css
+
+cache:
+  untracked: true
+  key: "$CI_PROJECT_ID"
+  paths:
+    - node_modules/
+    - .yarn
+
+build_web:
+  stage: build
+  script:
+    - npm test
+    - npm run build
