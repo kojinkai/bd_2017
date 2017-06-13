@@ -17,7 +17,7 @@ class Profile extends Component {
               <p className="profile__text">Producing progressive web apps that harness new technologies to deliver great customer experiences is my main motivation and a challenge that I relish.</p>
               <p className="profile__text">I use every project as an opportunity to learn new skills and I try to operate at the sharp edge of my expertise. I keep up to date with industry news and absorb all the best-practices I can find.</p>
               <p className="profile__text">I like to adopt a test-driven approach to development. I believe that this produces better software design and helps test your understanding of the requirements before diving into a feature.</p>
-              <p className="profile__text">When done well, TDD helps with continous delivery efforts by closing feedback loops early and shortening release cycles and contributes to an enjoyable, high-performance working culture.</p>
+              <p className="profile__text">When done well, TDD helps with continuous delivery efforts by closing feedback loops early and shortening release cycles and contributes to an enjoyable, high-performance working culture.</p>
               <p className="profile__text">I advocate integrating my work with downstream changes regularly and by keeping batch sizes small I aim to improve development agility and lessen the pain of root cause analysis if things go wrong.</p>
               <p className="profile__text">I really enjoy what I do and I&apos;m motivated by working with others who do too.</p>
             </div>
