@@ -22,3 +22,6 @@ yarn-error.log*
 
 # compiled CSS files
 src/**/*.css
+
+# local deploy script
+/scripts/deploy.sh
