@@ -1,4 +1,13 @@
 #!/bin/bash
+#
+# run this on your feature / bugfix / chore branch after you have squashed
+# the branches pull request via the Github GUI.
+# - it will checkout master
+# - rebase in the upstream squashed commit
+# - delete the old, now stale branch
+# - tag the code
+# - push the tag to origin
+#
 
 latestTag=$1;
 echo latestTag $latestTag
@@ -7,8 +16,8 @@ function cleanup {
   read tagname
   echo "tag set as $tagname"
   echo -n "enter your message: "
+  read message  
   echo "message set as $message"
-  read message
 
   if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
     echo currently on master, rebasing and tagging...
@@ -22,7 +31,7 @@ function cleanup {
     echo currently on master, rebasing and tagging...
     git pull --rebase origin master
     git branch -D $branchToDelete
-    git tag -a $tagname -m $message
+    git tag -a $tagname -m "$message"
     git push origin master
   fi
 }
