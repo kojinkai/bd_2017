@@ -16,11 +16,11 @@ function cleanup {
     git tag -a $tagname -m $message
     # git push origin master
   else
-    echo "pruning ${git rev-parse --abbrev-ref HEAD}..."
+    echo pruning `git rev-parse --abbrev-ref HEAD`...
     git checkout master
     echo currently on master, rebasing and tagging...
     git pull --rebase origin master
-    git branch -D ${git rev-parse --abbrev-ref HEAD}
+    git branch -D `git rev-parse --abbrev-ref HEAD`
     git tag -a $tagname -m $message
     # git push origin master   
   fi
