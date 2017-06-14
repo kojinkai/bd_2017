@@ -8,7 +8,7 @@
 #
 
 function cleanup {
-
+  # if current branch is master
   if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
     echo currently on master, rebasing...
     git pull --rebase origin master

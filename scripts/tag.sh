@@ -9,7 +9,7 @@
 # - push the tag to origin
 #
 
-function cleanup {
+function tag {
   echo -n "enter your tagname: "
   read tagname
   echo "tag set as $tagname"
@@ -28,4 +28,4 @@ function cleanup {
   fi
 }
 
-cleanup
+tag
