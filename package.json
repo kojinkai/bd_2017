@@ -1,6 +1,6 @@
 {
   "name": "bd2017",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": true,
   "dependencies": {
     "react": "^15.5.4",
@@ -21,6 +21,6 @@
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "tag": "./scripts/tag.sh",
-    "deploy": "npm run build && ./scripts/tag.sh && ./scripts/deploy.sh"
+    "deploy": "npm run build && ./scripts/deploy.sh"
   }
 }

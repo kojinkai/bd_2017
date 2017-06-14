@@ -9,8 +9,6 @@
 # - push the tag to origin
 #
 
-latestTag=$1;
-echo latestTag $latestTag
 function cleanup {
   echo -n "enter your tagname: "
   read tagname
@@ -25,14 +23,8 @@ function cleanup {
     git tag -a $tagname -m $message
     git push origin master
   else
-    echo pruning `git rev-parse --abbrev-ref HEAD`...
-    branchToDelete=`git rev-parse --abbrev-ref HEAD`
-    git checkout master
-    echo currently on master, rebasing and tagging...
-    git pull --rebase origin master
-    git branch -D $branchToDelete
-    git tag -a $tagname -m "$message"
-    git push origin master
+    echo you are currently attempting to tag on `git rev-parse --abbrev-ref HEAD`
+    echo "run cleanup.sh first to remove stale branches and re-run this script from master"
   fi
 }
 
