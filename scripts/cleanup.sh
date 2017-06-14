@@ -10,10 +10,9 @@
 function cleanup {
   # if current branch is master
   if [ `git rev-parse --abbrev-ref HEAD` == "master" ]; then
-    echo currently on master, rebasing...
+    echo currently on master, pulling upstream changes...
     git pull --rebase origin master
     git remote prune origin
-    git push origin master
   else
     echo pruning `git rev-parse --abbrev-ref HEAD`...
     branchToDelete=`git rev-parse --abbrev-ref HEAD`
