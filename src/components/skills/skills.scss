@@ -14,7 +14,8 @@
   &__container {
     @include breakpoint(large) {
       flex-direction: row;
-      margin-top: 6.25rem;
+      margin: 6.25rem auto;
+      max-width: 75rem;
     }
 
     display: flex;
