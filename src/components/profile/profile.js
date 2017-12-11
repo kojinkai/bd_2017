@@ -11,7 +11,7 @@ class Profile extends Component {
               <b className="icon-star_icon profile__icon"></b>
             </div>
             <div className="profile__messaging">
-              <p className="profile__text">I&apos;m a London based Front End developer with over 8 years experience.</p>
+              <p className="profile__text">I&apos;m a Berlin based Front End Engineer with over 8 years experience.</p>
               <p className="profile__text">I specialise in JavaScript application and responsive UI development. I draw upon my experience of working cross-functionally within agile product teams.</p>
               <p className="profile__text">I have a wealth of experience with frameworks such as Angular, React and Express which is underpinned by good engineering principles. Understanding the bigger pictures of scalability, modularity, testability and performance really helps make the most of these tools.</p>                            
               <p className="profile__text">Producing progressive web apps that harness new technologies to deliver great customer experiences is my main motivation and a challenge that I relish.</p>
